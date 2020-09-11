@@ -3,8 +3,8 @@ import React from "react"
 function Footer()
 {
     return(
-        <footer>
-            <h3>This is the footer</h3>
+        <footer className="navbar">
+            This is the footer
         </footer>
     )
 }
