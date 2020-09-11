@@ -3,8 +3,8 @@ import React from "react"
 function NavBar()
 {
     return(
-        <div>
-            <h1>This is the navbar</h1>
+        <div >
+            <h1 style={{color:"blue"}}>This is the navbar</h1>
             <ul>
                 <li>Thing 1</li>
                 <li>Thing 2</li>
