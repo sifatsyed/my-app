@@ -1,14 +1,21 @@
-import React from "react";
+import React, {Component} from "react";
 
-class MyInfo extends React.Component {
+class MyInfo extends Component {
   constructor(){
     super();
     this.state = {
         name: "Sifat",
-        major: "Computer Science"
+        major: "Computer Science",
+        isLoggedIn: true
     }
   }
   render() {
+    let wordDisplay;
+    if(this.state.isLoggedIn){
+      wordDisplay = "in";
+    } else{
+      wordDisplay = "out";
+    }
     return (
       <div>
         <h1>{this.state.name}</h1>
@@ -18,6 +25,7 @@ class MyInfo extends React.Component {
           <li>India</li>
           <li>Europe</li>
         </ul>
+        <h1>I'm currently logged {wordDisplay}</h1>
       </div>
     );
   }

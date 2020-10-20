@@ -16,9 +16,13 @@ import MyInfo from "./components/MyInfo";
 // }
 
 class AppNew extends React.Component {
+ 
   render() {
+    const styles = {
+        textAlign: "center"
+    }
     return (
-      <div>
+      <div style={styles}>
         <NavBar />
         <MyInfo />
         <MainContent />

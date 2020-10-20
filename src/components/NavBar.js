@@ -1,35 +1,33 @@
 import React from "react"
 
-// function NavBar()
-// {
-//     const styles = {
-//         color:"blue", backgroundColor:"yellow"
-//     }
-//     return(
-//         <div >
-//             <h1 style={styles}>This is the navbar</h1>
-//             <ul>
-//                 <li>Thing 1</li>
-//                 <li>Thing 2</li>
-//                 <li>Thing 3</li>
-//             </ul>
-//         </div>
-//     )
-// } 
-
 class NavBar extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            count: 0
+        }
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick() {
+       this.setState(prevState => {
+           return {
+               count: prevState.count + 1
+           }
+       })
+    }
     render (){
         const styles = {
-            color:"blue", backgroundColor:"yellow"
+            color:"black", backgroundColor:"pink"
         }
         return(
             <div >
                 <h1 style={styles}>This is the navbar</h1>
-                <ul>
-                    <li>Thing 1</li>
-                    <li>Thing 2</li>
-                    <li>Thing 3</li>
-                </ul>
+                <h1>{this.state.count}</h1>
+                <button onClick={this.handleClick}>
+                    Click
+                </button>
+
             </div>
         )
     }
