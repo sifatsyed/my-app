@@ -5,16 +5,6 @@ import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
 import MyInfo from "./components/MyInfo";
 
-// function AppNew(){
-//     return(
-//         <div>
-// <NavBar />
-// <MainContent />
-// <Footer />
-//         </div>
-//     )
-// }
-
 class AppNew extends React.Component {
  
   render() {

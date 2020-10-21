@@ -1,7 +1,30 @@
 import React from "react"
 
-//Writing using ES6 current syntax, function return using => COOOOOOLLLL
+import Conditional from "./Conditional"
 
-const MainContent = () => <p>This is the main content</p>
+class MainContent extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            isLoading: true
+        }
+    }
+
+    // componentDidMount() {
+    //     setTimeout(() => {
+    //         this.setState({
+    //            isLoading: false 
+    //         })
+    //     }, 1500)
+    // }
+
+    render() {
+        return (
+            <div>
+                <Conditional/>
+            </div>
+        )
+    }
+}
 
 export default MainContent
